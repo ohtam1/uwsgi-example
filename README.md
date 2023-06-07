@@ -1,6 +1,6 @@
 # Flask+uWSGI+NginxでAPIをちゃんと配置する話
 
-OpenAIのせいで「Flask + uWSGI + Nginx で API を書こう」みたいな要件が出てきました (主にAPI KEY 隠しと embedding のせい)。
+OpenAIのせいで「Flask + uWSGI + Nginx で API を書こう」みたいな要件が出てきました (主にAPI KEY 隠しと embedding のため)。
 
 ここでは
 
@@ -11,7 +11,7 @@ OpenAIのせいで「Flask + uWSGI + Nginx で API を書こう」みたいな�
 - モジュール類は [venv](https://docs.python.org/ja/3.10/library/venv.html) で
 - エンドポイントは
   - 開発時は <http://127.0.0.1:5000/> (Flaskのデフォルト)
-  - デプロイ時は <https://ホスト名/api/v1/>
+  - デプロイ時は <https://ホスト名/api/v1/> (Flask+uWSGI+Nginx)
 - デプロイ時のディレクトリ(プロジェクトディレクトリ)は `/opt/myapi` とする
 
 という、多分にポピュラーな構成で API を立ててみたいと思います。
